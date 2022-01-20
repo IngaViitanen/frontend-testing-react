@@ -51,7 +51,7 @@ describe('chat component', () => {
         expect(inputField).toHaveValue('')
     })
 
-    it('when the user has typed in the input field and pressed Enter the string becomes visible on the canvas', () => {
+    it('when the user has typed in the input field and pressed Enter the string becomes visible in the chat', () => {
         render( <Chat/> )
 
         const button = screen.getByRole('button', {name: 'CHAT'})
@@ -63,7 +63,7 @@ describe('chat component', () => {
 
         const messageString = screen.getByText('hejhej')
         expect(messageString).toBeInTheDocument()
-        
+
         expect(inputField).toHaveValue('')
 
     })
